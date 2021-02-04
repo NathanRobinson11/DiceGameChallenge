@@ -42,5 +42,5 @@ buttonRoll.addEventListener('click', ()=>{
 buttonReset.addEventListener('click', ()=>{
     gameScore = 0;
     score.textContent = 0;
-    gameResult.style.visibility = 'visible';
+    gameResult.style.visibility = 'hidden';
 });

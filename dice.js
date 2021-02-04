@@ -2,10 +2,7 @@ const buttonRoll = document.getElementById('roll');
 const buttonReset = document.getElementById('reset');
 let diceImage = document.getElementById('image');
 let score = document.getElementById('score');
-let gameScore = 10;
-
-score.textContent = gameScore;
-
+let gameScore = 0;
 
 
 //roll button - num between 1-6 & stores score - matches num with dice image
@@ -25,6 +22,10 @@ buttonRoll.addEventListener('click', ()=>{
     }else if (diceRoll === 6){
         diceImage.src='dice6.png'
     }
+
+    gameScore = gameScore + diceRoll;
+    score.textContent = gameScore;
+
 });
 
 //reset button - makes score change to 0 on click

@@ -1,18 +1,34 @@
 const buttonRoll = document.getElementById('roll');
 const buttonReset = document.getElementById('reset');
+let diceImage = document.getElementById('image');
 let score = document.getElementById('score');
 let gameScore = 10;
 
 score.textContent = gameScore;
 
-//roll button - generates random number between 1 and 6 and stores score in score text
 
 
+//roll button - num between 1-6 & stores score - matches num with dice image
 
+buttonRoll.addEventListener('click', ()=>{
+    let diceRoll = Math.ceil(Math.random()*6);
+    if(diceRoll === 1){
+        diceImage.src='dice1.png';
+    }else if(diceRoll === 2){
+        diceImage.src='dice2.png';
+    }else if(diceRoll === 3){
+        diceImage.src='dice3.png';
+    }else if(diceRoll === 4){
+        diceImage.src='dice4.png';
+    }else if (diceRoll === 5){
+        diceImage.src='dice5.png';
+    }else if (diceRoll === 6){
+        diceImage.src='dice6.png'
+    }
+});
 
 //reset button - makes score change to 0 on click
 buttonReset.addEventListener('click', ()=>{
 
     score.textContent = 0;
-
 });

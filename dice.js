@@ -9,17 +9,17 @@ let gameResult = document.getElementById('game-result');
 buttonRoll.addEventListener('click', ()=>{
     let diceRoll = Math.ceil(Math.random()*6);
     if(diceRoll === 1){
-        diceImage.src='dice1.png';
+        diceImage.src='./dice1.png';
     }else if(diceRoll === 2){
-        diceImage.src='dice2.png';
+        diceImage.src='./dice2.png';
     }else if(diceRoll === 3){
-        diceImage.src='dice3.png';
+        diceImage.src='./dice3.png';
     }else if(diceRoll === 4){
-        diceImage.src='dice4.png';
+        diceImage.src='./dice4.png';
     }else if (diceRoll === 5){
-        diceImage.src='dice5.png';
+        diceImage.src='./dice5.png';
     }else if (diceRoll === 6){
-        diceImage.src='dice6.png'
+        diceImage.src='./dice6.png';
     }
 
     gameScore = gameScore + diceRoll;

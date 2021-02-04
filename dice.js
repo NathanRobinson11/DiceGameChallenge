@@ -3,8 +3,7 @@ const buttonReset = document.getElementById('reset');
 let diceImage = document.getElementById('image');
 let score = document.getElementById('score');
 let gameScore = 0;
-let winScore = 20;
-let loseRoll = 1;
+let gameResult = document.getElementById('game-result');
 
 
 //roll button - num between 1-6 & stores score - matches num with dice image
@@ -27,6 +26,17 @@ buttonRoll.addEventListener('click', ()=>{
 
     gameScore = gameScore + diceRoll;
     score.textContent = gameScore;
+    gameResult.style.display = 'none';
+
+    if (diceRoll == 1){
+        gameResult.textContent = ("Bust!");
+        gameResult.style.display = 'block';
+        gameScore = 0;
+    }else if(gameScore >= 20){
+        gameResult.textContent = ("Winner");
+        gameResult.style.display = 'block';
+        gameScore = 0;
+    }
 
 });
 
@@ -34,4 +44,5 @@ buttonRoll.addEventListener('click', ()=>{
 buttonReset.addEventListener('click', ()=>{
     gameScore = 0;
     score.textContent = 0;
+    gameResult.style.display = 'block';
 });
